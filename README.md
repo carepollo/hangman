@@ -12,8 +12,9 @@ py main.py
 ```
 
 Screenshots:
-![screen when you start the game](https://github.com/carepollo/hangman/blob/master/images/Screenshot%202021-09-27%20203310.png)\
 
-![screen on walkthrough](https://github.com/carepollo/hangman/blob/master/images/Screenshot%202021-09-27%20203327.png)\
+![screen when you start the game](https://github.com/carepollo/hangman/blob/master/images/Screenshot%202021-09-27%20203310.png)
 
-![screen when you finish the game](https://github.com/carepollo/hangman/blob/master/images/Screenshot%202021-09-27%20203345.png)\
+![screen on walkthrough](https://github.com/carepollo/hangman/blob/master/images/Screenshot%202021-09-27%20203327.png)
+
+![screen when you finish the game](https://github.com/carepollo/hangman/blob/master/images/Screenshot%202021-09-27%20203345.png)
