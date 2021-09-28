@@ -1,5 +1,5 @@
 # hangman
-This is a simple game I made to practice python. Here you can:
+This is a console program I made to practice python. Here you can:
 
 - Choose difficulty
 - Will have different amount of trials depending on difficulty
