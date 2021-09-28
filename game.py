@@ -37,9 +37,7 @@ class Game:
 
         choice = "y"
         while choice != "n":
-            
             if choice == "y":
-            
                 self.config()
                 while self.run:
                     self.run = self.attempt()
@@ -82,9 +80,7 @@ class Game:
         """each word into the system, runnning the game"""
 
         if self.attempts >= 0:
-
             if self.complete < len(self.target):
-
                 system("cls")
                 print(f"You have {self.attempts} attempts left, write ONE word and count tildes")
                 print("You have tried: ", " ".join(self.given_words))
@@ -95,12 +91,11 @@ class Game:
 
                 for i in range(len(self.target)):
                     if choosen == self.target[i]:
-
                         if self.placeholder[i] != self.target[i]:
                             well = True
                             self.placeholder[i] = choosen
                             self.complete += 1
-                
+                            
                 if not well:
                     self.attempts -= 1
                     self.interface.define_state(self.attempts)
