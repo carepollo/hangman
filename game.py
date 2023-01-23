@@ -1,4 +1,4 @@
-from os import system
+from os import system, environ
 import random
 from character import Character
 
@@ -13,6 +13,7 @@ class Game:
     words = {"easy":[], "medium": [], "hard": []}
     run:bool
     given_words:list
+    file_location:str = environ.get("LOCATION")
 
     def __init__(self):
         self.interface = Character()
@@ -21,7 +22,7 @@ class Game:
     def set_data(self) -> None:
         """brings the words from given file"""
 
-        with open("data.txt", "r", encoding="utf-8") as file:
+        with open(self.file_location, "r", encoding="utf-8") as file:
             for line in file:
                 line = line.replace("\n", "")
 
