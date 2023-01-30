@@ -1,4 +1,4 @@
-from os import system, environ
+import os
 import random
 from character import Character
 
@@ -13,7 +13,7 @@ class Game:
     words = {"easy":[], "medium": [], "hard": []}
     run:bool
     given_words:list
-    file_location:str = environ.get("LOCATION")
+    file_location:str = os.path.dirname(__file__) + "/data.txt"
 
     def __init__(self):
         self.interface = Character()
@@ -82,7 +82,9 @@ class Game:
 
         if self.attempts >= 0:
             if self.complete < len(self.target):
-                system("cls")
+                # system("cls")
+                os.system("clear")
+                
                 print(f"You have {self.attempts} attempts left, write ONE word and count tildes")
                 print("You have tried: ", " ".join(self.given_words))
                 self.interface.show_ui()
@@ -118,7 +120,7 @@ class Game:
         elif dif == 3:
             level = self.words["hard"]
         else:
-            return False
+            raise TypeError("difficulty was not properly calculated")
 
         index = random.randint(0, len(level) - 1)
         word = level[index]
